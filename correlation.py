@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np 
-import time as t
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.write("Created by Juan Rossi")
 st.write("""
@@ -45,8 +45,8 @@ def plot(n, short):
         r.append(port_r(s1_r, s2_r, i, 1-i))
     plt.scatter(stds, r, c=weights)
     plt.colorbar()
-    plt.scatter(s1_std, s1_r, col="red")
-    plt.scatter(s2_std, s2_r, col="orange")
+    plt.scatter(s1_std, s1_r, color="red")
+    plt.scatter(s2_std, s2_r, color="orange")
     plt.xlabel("Standard deviation")
     plt.ylabel("Expected Return")
     plt.grid(True)
