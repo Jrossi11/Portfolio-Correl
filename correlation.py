@@ -59,4 +59,4 @@ if st.button("Plot portfolios"):
     min_var_weight = (s2_std**2-covar)/(s1_std**2+s2_std**2-2*covar)
     min_std = float(port_std(s1_std, s2_std, min_var_weight, 1-min_var_weight, correl))
     st.write("The colorbar corresponds to the weight of asset 1")
-    st.write("Minimum std: {}, with weight 1: {}%".format(round(min_std,2), round(min_var_weight*100,2)))
+    st.write("Minimum std: {}, with weight 1: {}%".format(round(min_std*100,3), round(min_var_weight*100,3)))
